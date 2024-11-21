@@ -20,7 +20,7 @@ body {
 a {
   font-weight: normal;
   text-decoration: none; 
-  color:#EF6D3D;
+  color: #EF6D3D;
 }
 a:focus {
   outline: thin dotted;
@@ -40,7 +40,7 @@ h4,
 h5,
 h6 {
   line-height: 1;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  text-rendering: optimizeLegibility; /* voodoo to enable ligatures and kerning */
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -76,11 +76,10 @@ q:after {
 }
 
 blockquote {
-  /*background-color: #F8F8F8;*/
   border-left: 2px solid #AFC0D2;
   margin: 1.6em 10%;
   padding: .75em 1em;
-  font-size:1.8rem;
+  font-size: 1.8rem;
 }
 blockquote p:last-child {
   margin-bottom: 0;  
@@ -91,19 +90,19 @@ blockquote p:last-child {
  */
 
 /* Full size background image */
-html, #container, .inner { background-color:transparent;}
+html, #container, .inner { background-color: transparent; }
 html {
-  background:url(hex_background.jpg) center center no-repeat fixed;
-  background-size:cover;
+  background: url(hex_background.jpg) center center no-repeat fixed;
+  background-size: cover;
 }
 body {
-  max-width:800px;
-  margin:25px auto;
+  max-width: 800px;
+  margin: 25px auto;
 }
 header, #content, footer { 
   background: rgba(0,0,0,.8); 
-  padding:25px;
-  color:#FFFFFF; 
+  padding: 25px;
+  color: #FFFFFF; 
 }
 
 /* Menu Links */
@@ -116,28 +115,28 @@ ul.main-menu {
   list-style: none;
 }
 ul.main-menu li a {
-  margin-right:20px;
-  font-size:2.0rem;
+  margin-right: 20px;
+  font-size: 2.0rem;
   border-bottom: solid transparent 3px;
-  color:#cfd2da;
+  color: #cfd2da;
 }
 ul.main-menu li a:hover {
-  color:#FFFFFF;
+  color: #FFFFFF;
 }
 ul.main-menu li a.active {
-  color:#FFFFFF;
-  border-bottom-color:#EF6D3D;
+  color: #FFFFFF;
+  border-bottom-color: #EF6D3D;
 }
 
 /* Utility classes */
 .hide {
-  display:none;
+  display: none;
 }
 .show {
-  display:block;
+  display: block;
 }
 
-/* Card stuff */
+/* Card Stuff */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -173,4 +172,15 @@ ul.main-menu li a.active {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Content Region */
+.content-region {
+  display: none;
+  padding: 20px;
+}
+
+/* Active region display */
+.content-region.show {
+  display: block;
 }
