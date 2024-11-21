@@ -155,12 +155,15 @@ ul.main-menu li a.active {
   transition: transform 0.2s, box-shadow 0.2s;
   background-color: #fff;
   text-align: center;
+  display: flex;  /* Allow for image to expand fully */
+  flex-direction: column; /* Ensure the content inside the card is stacked */
 }
 
 .card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 200px; /* Adjusted to fill the card area as needed */
+  object-fit: cover; /* Ensures the image is center-cropped */
+  object-position: center; /* Ensures the crop is centered */
 }
 
 .card h3 {
