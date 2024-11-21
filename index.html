@@ -3,9 +3,6 @@
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-<!--     <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'> -->
     <title>Kyle Strait - Portfolio</title>
     <meta name="description" content="A brief description of your site for search engines">
     <meta name="author" content="Information about the author here">
@@ -13,32 +10,26 @@
     <link rel="icon" type="image/png" href="favicon.png">
   
     <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
 
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
   </head>
   
   <body>
 
     <header id="header">
-      <img src="logo.png">
+      <img src="logo.png" alt="Logo">
       <h1>Portfolio</h1>
       
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <!-- Menu links -->
       <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#home" id="home-link">home</a></li>
+        <li><a href="#about" id="about-link">about</a></li>
+        <li><a href="#contact" id="contact-link">contact</a></li>
       </ul>                 
     </header>
    
@@ -46,54 +37,46 @@
       <div class="inner">
         <div id="content"> 
           
+          <!-- Home Content -->
           <div id="home" class="content-region hide">
             <h2>Home</h2>
-            <p>
-              Testing
-
-              <div id="projects" class="content-region">
-                <h2>Apps I've Worked On</h2>
-                <div class="card-container">
-                  <div class="card" onclick="window.open('https://example.com/app1', '_blank')">
-                    <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="App 1">
-                    <h3>App 1</h3>
-                  </div>
-                  <div class="card" onclick="window.open('https://example.com/app2', '_blank')">
-                    <img src="https://i.kym-cdn.com/entries/icons/original/000/016/212/manning.png" alt="App 2">
-                    <h3>App 2</h3>
-                  </div>
-                  <div class="card" onclick="window.open('https://example.com/app3', '_blank')">
-                    <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="App 3">
-                    <h3>App 3</h3>
-                  </div>
+            <p>Testing</p>
+            <div id="projects" class="content-region">
+              <h2>Apps I've Worked On</h2>
+              <div class="card-container">
+                <div class="card" onclick="window.open('https://example.com/app1', '_blank')">
+                  <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="App 1">
+                  <h3>App 1</h3>
+                </div>
+                <div class="card" onclick="window.open('https://example.com/app2', '_blank')">
+                  <img src="https://i.kym-cdn.com/entries/icons/original/000/016/212/manning.png" alt="App 2">
+                  <h3>App 2</h3>
+                </div>
+                <div class="card" onclick="window.open('https://example.com/app3', '_blank')">
+                  <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="App 3">
+                  <h3>App 3</h3>
                 </div>
               </div>
-            </p>
+            </div>
           </div>
           
+          <!-- About Content -->
           <div id="about" class="content-region hide">
             <h2>About</h2>
-            <p>
-              7+ years experience developing android applications. Technologies used: Kotlin, Java, MVVM, MVP , Data Binding, Compose, LiveData, Coroutines, Dagger/Hilt, Koin, RetroFit, OkHttp, Room, Picasso, Glide, GSON, Moshi, Firebase, Backendless, New Relic.
-            </p>
+            <p>7+ years experience developing Android applications. Technologies used: Kotlin, Java, MVVM, MVP, Data Binding, Compose, LiveData, Coroutines, Dagger/Hilt, Koin, RetroFit, OkHttp, Room, Picasso, Glide, GSON, Moshi, Firebase, Backendless, New Relic.</p>
           </div>
           
+          <!-- Contact Content -->
           <div id="contact" class="content-region hide">
             <h2>Contact</h2>
-            <p>
-              <a href="tel:5555555555">Phone: 555.555.5555</a>
-            </p>
+            <p><a href="tel:5555555555">Phone: 555.555.5555</a></p>
           </div>
           
         </div>
       </div>
     </div>
 
-<!--     <footer>  
-      Footer region
-    </footer> -->
-    
-    <!-- Load additional JS scripts here -->
+    <!-- Load the custom script -->
     <script type="text/javascript" src="script.js"></script>
     
   </body>
