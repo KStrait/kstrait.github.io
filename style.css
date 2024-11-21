@@ -139,15 +139,16 @@ ul.main-menu li a.active {
 
 /* Card stuff */
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .card {
-  width: 250px;
+  width: 100%; /* Ensures the card takes up the full width of its grid cell */
+  max-width: 250px; /* Optional, to cap the size on larger screens */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -173,5 +174,3 @@ ul.main-menu li a.active {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-
-
