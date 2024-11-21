@@ -145,17 +145,16 @@ ul.main-menu li a.active {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns, each taking equal space */
-  gap: 20px; /* Spacing between the cards */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between the cards */
   margin-top: 20px;
-  justify-items: center; /* Centers the cards within their grid cells */
-  padding: 0;
-  box-sizing: border-box;
+  padding: 0 10px; /* Optional: Add some padding to avoid cards sticking to the edges */
 }
 
 /* Card Styles */
 .card {
   width: 100%; /* Ensures the card takes up the full width of its grid cell */
+  max-width: 250px; /* Optional, to cap the size */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -167,13 +166,12 @@ ul.main-menu li a.active {
   flex-direction: column;
   justify-content: space-between; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
-  padding: 10px; /* Optional: Add padding for inner space */
 }
 
 /* Card Image */
 .card img {
   width: 100%;
-  height: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust the height to your needs */
   object-fit: cover;
   object-position: center;
 }
