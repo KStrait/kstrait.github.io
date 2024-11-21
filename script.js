@@ -3,16 +3,16 @@
   // Wait for the document to load before running the script
   $(window).on('load hashchange', function() {
     
-    // First, remove both 'show' and 'hide' classes from all content regions
+    // First, hide all content regions (set display to none)
     $('.content-region').removeClass('show').addClass('hide');
     
     // Remove any active classes on the main-menu
     $('.main-menu a').removeClass('active');
     
-    // If a hash is present in the URL, use it, otherwise default to the first menu item
+    // Get the region from the URL hash, or default to '#home' if no hash is present
     var region = location.hash.toString() || '#home'; // Default to '#home' if no hash is present
     
-    // Show the region specified in the URL hash by adding the 'show' class and removing the 'hide' class
+    // Show the region specified in the URL hash by adding the 'show' class and removing 'hide' class
     $(region).removeClass('hide').addClass('show');
     
     // Highlight the menu link associated with this region by adding the .active CSS class
