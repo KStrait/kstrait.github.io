@@ -147,8 +147,8 @@ ul.main-menu li a.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-content: center;  /* Centers the entire grid of cards */
   margin-top: 20px;
+  justify-items: center; /* Centers the individual cards in their grid cells */
 }
 
 /* Card Styles */
