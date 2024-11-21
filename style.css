@@ -145,10 +145,10 @@ ul.main-menu li a.active {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic width, ensuring no card is smaller than 250px */
-  gap: 20px; /* Dynamic spacing between the cards */
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns, each taking equal space */
+  gap: 20px; /* Spacing between the cards */
   margin-top: 20px;
-  justify-items: center; /* Centers the individual cards in their grid cells */
+  justify-items: center; /* Centers the cards within their grid cells */
   padding: 0;
   box-sizing: border-box;
 }
@@ -156,7 +156,6 @@ ul.main-menu li a.active {
 /* Card Styles */
 .card {
   width: 100%; /* Ensures the card takes up the full width of its grid cell */
-  max-width: 250px; /* Optional, to cap the size on larger screens */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
