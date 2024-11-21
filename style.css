@@ -142,15 +142,16 @@ ul.main-menu li a.active {
   display: block;
 }
 
-/* Card Stuff */
+/* Card Container */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-content: center;
+  justify-content: center;  /* Centers the entire grid of cards */
   margin-top: 20px;
 }
 
+/* Card Styles */
 .card {
   width: 100%; /* Ensures the card takes up the full width of its grid cell */
   max-width: 250px; /* Optional, to cap the size on larger screens */
@@ -161,21 +162,28 @@ ul.main-menu li a.active {
   transition: transform 0.2s, box-shadow 0.2s;
   background-color: #fff;
   text-align: center;
-  display: flex;  /* Allow for image to expand fully */
-  flex-direction: column; /* Ensure the content inside the card is stacked */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  padding: 10px; /* Optional: Add padding for inner space */
 }
 
+/* Card Image */
 .card img {
   width: 100%;
-  height: 200px; /* Adjusted to fill the card area as needed */
-  object-fit: cover; /* Ensures the image is center-cropped */
-  object-position: center; /* Ensures the crop is centered */
+  height: 150px;  /* Adjust as needed */
+  object-fit: cover;
+  object-position: center;
 }
 
+/* Card Heading and Text */
 .card h3 {
   margin: 10px 0;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 .card:hover {
