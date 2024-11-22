@@ -188,12 +188,14 @@ ul.main-menu li a.active {
   gap: 1rem; /* Even spacing between cards */
   justify-content: center; /* Center the grid */
   width: 100%;
+  padding: 0 1rem; /* Padding for responsive space */
 }
 
-/* Ensure cards maintain even space regardless of the number of rows */
+/* Ensure cards maintain equal space regardless of the number of rows */
 .card-container .col {
   display: flex;
   justify-content: center;
+  align-items: stretch; /* Stretch to equal height */
 }
 
 /* Responsive Breakpoints */
