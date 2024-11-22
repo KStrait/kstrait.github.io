@@ -192,7 +192,7 @@ ul.main-menu li a.active {
 /* Responsive Breakpoints */
 @media (max-width: 576px) {
   .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Single column on mobile */
+    grid-template-columns: repeat(1, 1fr); /* Single column on mobile */
   }
 }
 
