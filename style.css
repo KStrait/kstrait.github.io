@@ -184,12 +184,25 @@ ul.main-menu li a.active {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust card width dynamically */
+  grid-template-columns: repeat(3, 1fr); /* Always 3 cards per row */
   gap: 1rem; /* Even spacing between cards */
   justify-content: center; /* Center the grid */
+  width: 100%;
+}
+
+/* Ensure cards maintain even space regardless of the number of rows */
+.card-container .col {
+  display: flex;
+  justify-content: center;
 }
 
 /* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
 @media (max-width: 576px) {
   .card-container {
     grid-template-columns: repeat(1, 1fr); /* Single column on mobile */
