@@ -181,9 +181,36 @@ ul.main-menu li a.active {
   text-align: center;
 }
 
+/* Card Container for dynamic sizing and centering */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards */
+  gap: 1rem; /* Space between cards */
+}
+
+/* Responsive card sizing */
+.card {
+  flex: 0 0 calc(100% - 2rem); /* Default: Full width for mobile */
+  max-width: calc(33.33% - 1rem); /* Limit to one-third of the row for larger screens */
+}
+
 /* Bootstrap gutter adjustments */
 .g-4 > [class*="col"] {
   padding: 1rem; /* Adjust space between columns if needed */
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px) {
+  .card {
+    flex: 0 0 calc(50% - 1rem); /* Two cards per row for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(33.33% - 1rem); /* Three cards per row for medium and larger screens */
+  }
 }
 
 /* Content Region */
