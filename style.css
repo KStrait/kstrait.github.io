@@ -146,7 +146,7 @@ ul.main-menu li a.active {
 .card {
   display: flex;
   flex-direction: column;
-  height: auto; /* Allow height to adjust dynamically */
+  height: 100%; /* Allow height to adjust dynamically based on content */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -186,28 +186,30 @@ ul.main-menu li a.active {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Always 3 cards per row */
   gap: 1rem; /* Even spacing between cards */
-  justify-content: center; /* Center the grid */
+  justify-items: center; /* Center the grid items */
   width: 100%;
-  padding: 0 1rem; /* Padding for responsive space */
 }
 
-/* Ensure cards maintain equal space regardless of the number of rows */
-.card-container .col {
+/* Ensure the cards maintain equal height across different rows */
+.card-container .card {
   display: flex;
-  justify-content: center;
-  align-items: stretch; /* Stretch to equal height */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Responsive Breakpoints */
+
+/* Medium screens (tablets) */
 @media (max-width: 1024px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
   }
 }
 
+/* Small screens (mobile) */
 @media (max-width: 576px) {
   .card-container {
-    grid-template-columns: repeat(1, 1fr); /* Single column on mobile */
+    grid-template-columns: 1fr; /* Single card per row on mobile */
   }
 }
 
