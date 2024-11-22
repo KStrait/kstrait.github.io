@@ -188,7 +188,7 @@ ul.main-menu li a.active {
 }
 
 .card-title {
-  font-size: 1.2rem; /* Ensure text is large enough */
+  font-size: 2rem; /* Ensure text is large enough */
   color: black !important; /* Ensure card titles are black */
 }
 
