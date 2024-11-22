@@ -146,7 +146,7 @@ ul.main-menu li a.active {
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure cards take up equal height */
+  height: 100%; /* Ensures all cards are the same height */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -185,7 +185,7 @@ ul.main-menu li a.active {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
   gap: 1rem; /* Even spacing between cards */
   justify-items: center; /* Center the grid items */
   width: 100%;
@@ -204,10 +204,6 @@ ul.main-menu li a.active {
 @media (max-width: 576px) {
   .card-container {
     grid-template-columns: 1fr; /* Single card per row on mobile */
-  }
-
-  .card-body {
-    flex-grow: 1; /* Ensure the card body expands to fill space */
   }
 }
 
