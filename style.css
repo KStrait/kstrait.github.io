@@ -196,7 +196,7 @@ ul.main-menu li a.active {
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
-  gap: 1rem; /* Even spacing between cards */
+  gap: 2rem; /* Even spacing between cards */
   justify-items: center; /* Center the grid items */
   width: 100%;
 }
