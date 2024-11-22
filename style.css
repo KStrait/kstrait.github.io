@@ -184,6 +184,12 @@ ul.main-menu li a.active {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  color: black !important; /* Ensures text color is black */
+}
+
+.card-title {
+  font-size: 1.2rem; /* Ensure text is large enough */
+  color: black !important; /* Ensure card titles are black */
 }
 
 /* Card Container */
