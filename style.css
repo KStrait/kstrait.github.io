@@ -146,13 +146,14 @@ ul.main-menu li a.active {
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensures all cards are the same height */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  height: 100%; /* Ensure height adjusts dynamically */
+  width: 100%; /* Ensures all cards are the same width */
 }
 
 .card:hover {
@@ -179,7 +180,10 @@ ul.main-menu li a.active {
 .card-body {
   padding: 16px;
   text-align: center;
-  flex-grow: 1; /* Ensures the card body takes up the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 /* Card Container */
@@ -204,6 +208,11 @@ ul.main-menu li a.active {
 @media (max-width: 576px) {
   .card-container {
     grid-template-columns: 1fr; /* Single card per row on mobile */
+  }
+
+  /* Make sure card images are responsive on mobile */
+  .card-img-container {
+    padding-top: 75%; /* Adjust for mobile screen */
   }
 }
 
