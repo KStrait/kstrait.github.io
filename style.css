@@ -20,7 +20,7 @@ body {
  */
 a {
   font-weight: normal;
-  text-decoration: none; 
+  text-decoration: none;
   color: #EF6D3D;
 }
 a:focus {
@@ -83,7 +83,7 @@ blockquote {
   font-size: 1.8rem;
 }
 blockquote p:last-child {
-  margin-bottom: 0;  
+  margin-bottom: 0;
 }
 
 /**
@@ -100,10 +100,10 @@ body {
   max-width: 800px;
   margin: 25px auto;
 }
-header, #content, footer { 
-  background: rgba(0,0,0,.8); 
+header, #content, footer {
+  background: rgba(0,0,0,.8);
   padding: 25px;
-  color: #FFFFFF; 
+  color: #FFFFFF;
 }
 
 /* Menu Links */
@@ -132,7 +132,7 @@ ul.main-menu li a.active {
 .black {
   color: #000000;
 }
-  
+
 
 /* Utility classes */
 .hide {
@@ -195,10 +195,18 @@ ul.main-menu li a.active {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
+  grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
   gap: 2rem; /* Even spacing between cards */
-  justify-items: center; /* Center the grid items */
+  justify-items: center; /* Center items within their grid cell */
+  align-items: stretch; /* Default, but good to be explicit for card height */
   width: 100%;
+  justify-content: center; /* Center the entire row of items */
+}
+
+/* Target the last row with fewer than 3 items */
+.card-container > .card:nth-last-child(1),
+.card-container > .card:nth-last-child(2) {
+  grid-column: span 1; /* Each card spans one column */
 }
 
 /* Responsive Breakpoints */
@@ -206,7 +214,16 @@ ul.main-menu li a.active {
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on medium screens */
+  }
+  .card-container > .card:nth-last-child(1) {
+    grid-column: span 1;
+  }
+  .card-container {
+    justify-content: center; /* Center the last item */
+  }
+  .card-container > .card:nth-last-child(2) {
+    grid-column: span 1; /* Ensure they only take one column */
   }
 }
 
@@ -215,10 +232,8 @@ ul.main-menu li a.active {
   .card-container {
     grid-template-columns: 1fr; /* Single card per row on mobile */
   }
-
-  /* Make sure card images are responsive on mobile */
-  .card-img-container {
-    padding-top: 75%; /* Adjust for mobile screen */
+  .card-container {
+    justify-content: center; /* Center the single item */
   }
 }
 
