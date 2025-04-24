@@ -240,8 +240,10 @@ ul.main-menu li a.active {
 /* Content Region */
 .content-region {
   display: none;
-  padding: 20px;
+  padding: 0;
 }
+
+/*  padding: 20px; */
 
 /* Active region display */
 .content-region.show {
